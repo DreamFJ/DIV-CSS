@@ -1,0 +1,579 @@
+@charset "utf-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{height: 100%;}
+/*整体*/
+.whole{
+	position: relative;
+	margin: 0 auto;
+	width: 50%;
+	height: 100%;
+	background-color: #E8DABF;
+}
+/*整个身体*/
+.body{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -125px;
+	margin-top: -125px;
+	width: 250px;
+	height: 250px;
+	border: 2px solid #000;
+	border-radius: 125px;
+	background-color: #fff;
+}
+/*耳朵*/
+.ear{
+	width: 0;
+	height: 0;
+}
+/*左耳*/
+.leftEar{
+	position: absolute;
+	left: 5px;
+	top: 20px;
+	border-width: 35px 25px;
+	border-style: solid;
+	border-color: #000 transparent transparent #000;
+	border-top-left-radius: 15px 30px;
+}
+.leftEar::before{
+	position: absolute;
+	left: -23px;
+	top: -33px;
+	content: '';
+	width: 0;
+	height: 0;
+	border-width: 35px 25px;
+	border-style: solid;
+	border-color: #fff transparent transparent #fff;
+	border-top-left-radius: 15px 30px;
+}
+/*右耳*/
+.rightEar{
+	position: absolute;
+	right: 5px;
+	top: 20px;
+	border-width: 35px 25px;
+	border-style: solid;
+	border-color: #000 #000 transparent transparent;
+	border-top-right-radius: 15px 30px;
+}
+.rightEar::before{
+	position: absolute;
+	right: -23px;
+	top: -33px;
+	content: '';
+	width: 0;
+	height: 0;
+	border-width: 35px 25px;
+	border-style: solid;
+	border-color: #fff #fff transparent transparent;
+	border-top-right-radius: 15px 30px;
+}
+/*头部上面那部分太圆了，用矩形挡一下*/
+.header::before{
+	position: absolute;
+	left: 14px;
+	top: -2px;
+	z-index: 2;
+	content: "";
+	width: 235px;
+	height: 24px;
+	display: inline-block;
+	text-align: center;
+	background-color: #E8DABF;
+}
+/*修复头上多余的一块白色的东西*/
+.header::after{
+	position: absolute;
+	left: 62px;
+	top: 2px;
+	z-index: 2;
+	display: inline-block;
+	content: "";
+	width: 126px;
+	height: 48px;
+	background-color: #E8DABF;
+}
+/*修复耳朵的上部分*/
+.leftDeb{
+	position: absolute;
+	left: 12px;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-width: 15px 25px;
+	border-style: solid;
+	border-color: #000 #000 transparent transparent;
+}
+.leftDeb::after{
+	content: "";
+	position: absolute;
+	left: -30px;
+	top: -20px;
+	width: 0;
+	height: 0;
+	border-width: 15px 28px;
+	border-style: solid;
+	border-color: #E8DABF #E8DABF transparent transparent;
+}
+.rightDeb{
+	position: absolute;
+	right: 12px;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-width: 15px 25px;
+	border-style: solid;
+	border-color: #000 transparent transparent #000;
+}
+.rightDeb::after{
+	content: "";
+	position: absolute;
+	right: -30px;
+	top: -20px;
+	width: 0;
+	height: 0;
+	border-width: 15px 28px;
+	border-style: solid;
+	border-color: #E8DABF transparent transparent #E8DABF;
+}
+/*头发*/
+.hair{
+	position: absolute;
+	left: 62px;
+	top: 20px;
+	z-index: 3;
+	width: 126px;
+	height: 80px;
+	background-color: #000;
+	border-top-left-radius:40px 25px; 
+	border-bottom-left-radius:45px 30px;
+	border-top-right-radius:40px 25px; 
+	border-bottom-right-radius:45px 30px;
+}
+.leftHair{
+	position: absolute;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #F3AE6D;
+	border: 1px solid #000;
+	border-top-left-radius:30px 30px; 
+	border-top-right-radius:10px 10px;
+	border-bottom-left-radius:45px 30px;
+	border-bottom-right-radius:5px 10px;
+}
+.rightHair{
+	position: absolute;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #8D8C88;
+	border: 1px solid #000;
+	border-top-right-radius:30px 30px; 
+	border-top-left-radius: 10px 5px;
+	border-bottom-right-radius:45px 30px;
+	border-bottom-left-radius:5px 5px;
+}
+/*眼睛*/
+.leftEye{
+	position: absolute;
+	left: 45px;
+	top: 130px;
+	width: 50px;
+	height: 35px;
+	box-shadow: 0 0 1px;
+	border: 2px solid #000;
+	border-bottom-left-radius:25px 35px; 
+	border-top-left-radius:5px 3px; 
+	border-top-right-radius:15px 3px; 
+	border-bottom-right-radius:35px; 
+	transform: rotate(30deg);
+}
+.rightEye{
+	position: absolute;
+	right: 40px;
+	top: 125px;
+	width: 50px;
+	height: 35px;
+	box-shadow: 0 0 1px;
+	border: 2px solid #000;
+	border-bottom-left-radius:25px 35px; 
+	border-top-left-radius:5px 3px; 
+	border-top-right-radius:15px 3px; 
+	border-bottom-right-radius:35px; 
+	transform: rotate(-30deg);
+}
+/*左眼上面的黑线*/
+.lines{
+	position: absolute;
+	left: 20%;
+	top: 90px;
+	animation: move 2s linear infinite alternate;
+}
+@keyframes move{
+	from{
+		left: 20%;
+		top: 90px;
+	}
+	to{
+		left: 24%;
+		top: 97px;
+	}
+}
+.lineOne{
+	position: absolute;
+	left: 5px;
+	top: -5px;
+	width: 1px;
+	height: 32px;
+	background-color: #000;
+	box-shadow: 0px 0px 12px #000;
+}
+.lineTwo{
+	position: absolute;
+	left: 15px;
+	top: 3px;
+	width: 1px;
+	height: 25px;
+	background-color: #000;
+	box-shadow: 0px 0px 12px #000;
+}
+.lineThree{
+	position: absolute;
+	left: 25px;
+	top: 6px;
+	width: 1px;
+	height: 22px;
+	background-color: #000;
+	box-shadow: 0px 0px 12px #000;
+}
+/*胡子*/
+.beard{
+	position: absolute;
+	left: 50%;
+	top: 155px;
+	width: 10px;
+	height: 5px;
+	border-bottom: 2px solid #000;
+	border-radius: 5px;
+}
+.leftBeard{
+	position: absolute;
+	left: -10px;
+	width: 15px;
+	height: 10px;
+	border-bottom: 2px solid #000;
+	border-radius: 10px; 
+}
+.rightBeard{
+	position: absolute;
+	right: -10px;
+	width: 15px;
+	height: 10px;
+	border-bottom: 2px solid #000;
+	border-radius: 10px; 
+}
+/*嘴巴上面的小三角也是另外一种红色*/
+.beard::after{
+	position: absolute;
+	left: 1px;
+	top: 5px;
+	z-index: 2;
+	content: '';
+	border: 4px solid;
+	border-color: transparent transparent #E5675F transparent;
+}
+/*嘴巴*/
+.mouth{
+	position: absolute;
+	left: 46%;
+	top: 170px;
+	width: 28px;
+	height: 20px;
+	border: 1px solid #000;
+	border-top: none;
+	border-top-left-radius: 11px;
+	border-top-right-radius: 11px;
+	border-bottom-left-radius: 20px 10px;
+	border-bottom-right-radius: 20px 10px;
+	background-color: #F0A099;
+}
+/*嘴巴上面还有另外一种红色*/
+.mouth::before{
+	content: "";
+	position: absolute;
+	left: -1px;
+	top: -4px;
+	display: inline-block;
+	width: 28px;
+	height: 9px;
+	background-color: #E5675F;
+	border: 1px solid #000;
+	border-bottom: none;
+	border-top-left-radius: 15px 20px;
+	border-top-right-radius: 15px 20px;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
+}
+/*脸部*/
+/*左脸*/
+.leftFace{
+	position: absolute;
+	left: 10%;
+	top: 130px;
+}
+.leftFace .leftOne{
+	position: absolute;
+	left: 3px;
+	border-width: 4px 8px;
+	border-style: solid;
+	border-color: transparent transparent #C05952 #C05952;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	transform: rotate(45deg);
+}
+.leftFace .leftTwo{
+	position: absolute;
+	left: 2px;
+	top: 13px;
+	box-shadow: 0 0 2px #C05952;
+	border-width: 2px 5px;
+	border-style: solid;
+	border-color: #C05952;
+	border-radius: 2px 3px;
+	transform: rotate(45deg);
+}
+.leftFace .leftThree{
+	position: absolute;
+	top: 23px;
+	border-width: 4px 8px;
+	border-style: solid;
+	border-color: transparent transparent #B06E68 #C05952;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	transform: rotate(5deg);
+}
+.leftFace .leftFour{
+	position: absolute;
+	left: 6px;
+	top: 35px;
+	width: 18px;
+	height: 5px;
+	border-bottom: 3px solid #C05952;
+	border-radius: 10px;
+	transform: rotate(-15deg);
+}
+/*右脸*/
+.rightFace{
+	position: absolute;
+	right: 10%;
+	top: 130px;
+}
+.rightFace .rightOne{
+	position: absolute;
+	right: -2px;
+	top: -5px;
+	border-width: 3px 6px;
+	border-style: solid;
+	border-color: #C05952 #C05952 transparent transparent;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	transform: rotate(-85deg);
+}
+.rightFace .rightTwo{
+	position: absolute;
+	right: 3px;
+	top: -2px;
+	border-width: 10px 4px;
+	border-style: solid;
+	border-color: #C05952 transparent transparent transparent;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 5px;
+	transform: rotate(45deg);
+}
+.rightFace .rightThree{
+	position: absolute;
+	right: -6px;
+	top: 17px;
+	border-width: 3px 6px;
+	border-style: solid;
+	border-color: #C05952 #C05952 transparent transparent;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	transform: rotate(-55deg);
+}
+.rightFace .rightFour{
+	position: absolute;
+	right: 2px;
+	top: 25px;
+	width: 18px;
+	height: 5px;
+	border-bottom: 3px solid #C05952;
+	border-radius: 10px;
+	transform: rotate(-5deg);
+}
+/*小情绪*/
+.mood{
+	position: absolute;
+	left: 27%;
+	top: 43%;
+	width: 40px;
+	height: 15px;
+	background-color: #FCF916;
+	border: 1px solid #000;
+	border-bottom: none;
+	border-top: none;
+	transform: rotate(-80deg);
+}
+.leftMood{
+	position: absolute;
+	left: -1px;
+	top: -15px;
+	width: 20px;
+	height: 18px;
+	background-color: #E8DABF;
+	border-bottom: 2px solid #000;
+	border-radius: 10px;
+}
+.rightMood{
+	position: absolute;
+	right: -1px;
+	top: -15px;
+	width: 22px;
+	height: 22px;
+	background-color: #E8DABF;
+	border-bottom: 2px solid #000;
+	border-radius: 8px;
+}
+
+
+/*身体部分*/
+/*项圈*/
+.necklace{
+	position: absolute;
+	bottom: 25px;
+	width: 250px;
+	height: 170px;
+	border-bottom: 10px solid #B63136;
+	border-radius: 125px;
+	/*项圈边有黑框，通过阴影效果添加*/
+	box-shadow: 0 2px 1px, 0 -2px 1px inset;
+}
+/*铃铛*/
+.bell{
+	position: absolute;
+	left: 120px;
+	bottom: -15px;
+	width: 20px;
+	height: 20px;
+	background-color: #FCF916;
+	border: 1px solid #000;
+	border-radius: 10px;
+	box-shadow: 3px 3px 4px;
+}
+/*铃铛上的小白圈*/
+.bell::before{
+	position: absolute;
+	left: 0px;
+	top: 5px;
+	content: "";
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+/*铃铛上的小黑圈*/
+.bell::after{
+	position: absolute;
+	left: 5px;
+	top: 3px;
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: #000;
+	border-radius: 5px;
+}
+/*铃铛下面一条黑线*/
+.theLine{
+	position: absolute;
+	left: 9px;
+	top: 12px;
+	width: 2px;
+	height: 9px;
+	background-color: #000;
+}
+/*手*/
+/*用全边框*/
+.leftHand{
+	position: absolute;
+	left: 90px;
+	top: 226px;
+	border-width: 10px 10px;
+	border-style: solid;
+	border-color: #000;
+	border-top-right-radius: 15px 13px;
+	border-bottom-right-radius: 25px 10px;
+	transform: rotate(-85deg);
+	transform-origin: 0 10px;
+	animation: shakeLeft 1s steps(2,start) infinite;
+}
+@keyframes shakeLeft{
+	from{
+		transform: rotate(-85deg);
+	}
+	to{
+		transform: rotate(-35deg);
+	}
+}
+.leftHand::after{
+	content: '';
+	position: absolute;
+	left: -11px;
+	top: -8px;
+	border-width: 8px 10px;
+	border-style: solid;
+	border-color: #fff;
+	border-top-right-radius: 15px 10px;
+	border-bottom-right-radius: 25px 10px;
+}
+.rightHand{
+	position: absolute;
+	right: 75px;
+	top: 222px;
+	border-width: 10px 10px;
+	border-style: solid;
+	border-color: #000;
+	border-top-left-radius: 15px 13px;
+	border-bottom-left-radius: 25px 10px;
+	transform: rotate(35deg);
+	transform-origin: 20px 10px;
+	animation: shakeRight 1s steps(2,start) infinite;
+}
+@keyframes shakeRight{
+	from{
+		transform: rotate(65deg);
+	}
+	to{
+		transform: rotate(35deg);
+	}
+}
+.rightHand::after{
+	content: '';
+	position: absolute;
+	right: -11px;
+	top: -8px;
+	border-width: 8px 10px;
+	border-style: solid;
+	border-color: #fff;
+	border-top-left-radius: 15px 10px;
+	border-bottom-left-radius: 25px 10px;
+}
